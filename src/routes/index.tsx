@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, Hammer, KeyRound, MapPin } from "lucide-react";
 import heroEstate from "@/assets/hero-estate.jpg";
 import interior from "@/assets/interior.jpg";
+import logo from "@/assets/praedion-logo-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -42,27 +43,27 @@ const services = [
   {
     icon: Hammer,
     title: "Sanierung",
-    text: "Denkmalgerecht, energetisch durchdacht und mit hochwertigen Materialien: Wir bringen alte Bausubstanz zurück auf den Stand von heute.",
+    text: "Sorgfältig geplant, energetisch durchdacht und mit langlebigen Materialien umgesetzt: Wir bringen bestehende Gebäude auf den heutigen Standard.",
   },
   {
     icon: KeyRound,
     title: "Vermietung",
-    text: "Sanierte Wohn- und Gewerbeflächen zu fairen Konditionen — langfristig vermietet und persönlich betreut.",
+    text: "Sanierte Wohn- und Gewerbeflächen zu fairen Konditionen — langfristig vermietet und zuverlässig verwaltet.",
   },
 ];
 
 const principles = [
   {
-    title: "Substanz vor Trend",
-    text: "Wir investieren in bestehende Gebäude mit Charakter — nicht in den nächsten Neubau. Jedes Haus hat eine Geschichte, die es zu bewahren gilt.",
+    title: "Bestand vor Neubau",
+    text: "Wir investieren in bestehende Wohn- und Geschäftshäuser und entwickeln sie weiter — statt Bauland zu verbrauchen. Erhalt ist wirtschaftlich und sinnvoll zugleich.",
   },
   {
     title: "Ländlicher Raum als Chance",
-    text: "Dorfkern statt Ballungsrand: Wo andere Leerstand sehen, erkennen wir Wert — für die Menschen, die dort leben und arbeiten wollen.",
+    text: "Ortskerne statt Ballungsrand: Wo andere Leerstand sehen, erkennen wir nutzbaren Wert — für Menschen, die dort leben und arbeiten wollen.",
   },
   {
     title: "Langfristig denken",
-    text: "Wir kaufen, um zu behalten. Unsere Immobilien werden instand gehalten, fair vermietet und über Generationen hinweg entwickelt.",
+    text: "Wir kaufen, um zu behalten. Unsere Immobilien werden instand gehalten, fair vermietet und über lange Haltedauer entwickelt.",
   },
 ];
 
@@ -72,20 +73,21 @@ function LandingPage() {
       {/* Navigation */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-ink/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link to="/" className="flex items-baseline gap-2">
-            <span className="font-display text-xl font-semibold tracking-[0.18em] gold-text-gradient">
-              PRAEDION
-            </span>
-            <span className="text-[0.65rem] font-light uppercase tracking-[0.45em] text-muted-foreground">
-              Capital
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo.url}
+              alt="Praedion Capital"
+              width={1920}
+              height={470}
+              className="h-9 w-auto"
+            />
           </Link>
           <nav className="hidden items-center gap-8 text-sm font-light tracking-wide text-muted-foreground md:flex">
             <a href="#leistungen" className="transition-colors hover:text-gold">
               Leistungen
             </a>
-            <a href="#ueber-uns" className="transition-colors hover:text-gold">
-              Über uns
+            <a href="#unternehmen" className="transition-colors hover:text-gold">
+              Unternehmen
             </a>
             <a href="#prinzipien" className="transition-colors hover:text-gold">
               Prinzipien
@@ -104,7 +106,7 @@ function LandingPage() {
       <section className="relative flex min-h-screen items-end overflow-hidden">
         <img
           src={heroEstate}
-          alt="Sorgfältig saniertes Landhaus in der Abenddämmerung"
+          alt="Saniertes Wohn- und Geschäftshaus in einer Kleinstadt am Abend"
           width={1920}
           height={1088}
           className="absolute inset-0 h-full w-full object-cover"
@@ -165,7 +167,7 @@ function LandingPage() {
                   {title === "Ankauf"
                     ? "Auch erbschafts- oder teilmieterbestand"
                     : title === "Sanierung"
-                      ? "Energetisch & denkmalgerecht"
+                      ? "Energetisch & langlebig"
                       : "Wohn- & Gewerbeflächen"}
                 </span>
               </article>
@@ -174,13 +176,13 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Über uns */}
-      <section id="ueber-uns" className="border-t border-border/60">
+      {/* Unternehmen */}
+      <section id="unternehmen" className="border-t border-border/60">
         <div className="mx-auto grid max-w-6xl md:grid-cols-2">
           <div className="relative min-h-[320px]">
             <img
               src={interior}
-              alt="Hochwertig sanierter Altbau-Innenraum"
+              alt="Saniertes Treppenhaus eines Mehrfamilienhauses"
               width={1600}
               height={1200}
               loading="lazy"
@@ -188,20 +190,20 @@ function LandingPage() {
             />
           </div>
           <div className="flex flex-col justify-center gap-6 bg-ink-elevated px-8 py-20 sm:px-14">
-            <p className="eyebrow">Über uns</p>
+            <p className="eyebrow">Unternehmen</p>
             <h2 className="font-display text-4xl font-medium leading-tight sm:text-5xl">
-              Wo andere Leerstand sehen, sehen wir Wert.
+              Wo andere Leerstand sehen, sehen wir nutzbaren Wert.
             </h2>
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
               Praedion Capital ist eine auf den ländlichen Raum spezialisierte
               Immobiliengesellschaft. Wir erwerben Wohn- und Geschäftshäuser in
-              Dörfern und Kleinstädten, sanieren sie mit Sorgfalt und hoher
-              Qualität und vermieten sie langfristig an Mieter, die bleiben wollen.
+              Dörfern und Kleinstädten, sanieren sie sorgfältig und hochwertig
+              und vermieten sie langfristig.
             </p>
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-              Unser Anspruch ist schlicht: Gebäude, die seit Jahrzehnten das Ortsbild
-              prägen, sollen es auch in den nächsten Jahrzehnten tun — belebt,
-              instandgesetzt und wirtschaftlich tragfähig.
+              Unser Anspruch ist schlicht: Bestehende Gebäude in Ortslagen
+              bleiben genutzt, instandgesetzt und wirtschaftlich tragfähig —
+              statt leerzustehen oder zu verfallen.
             </p>
             <div className="mt-4 flex items-center gap-3 text-gold">
               <MapPin className="h-4 w-4" strokeWidth={1.5} />
@@ -253,38 +255,63 @@ function LandingPage() {
             Sie verkaufen ein Haus im ländlichen Raum?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-            Ob Mehrfamilienhaus, ehemalige Dorfwirtschaft oder Leerstand in bester
-            Lage — melden Sie sich unverbindlich. Wir prüfen Ihr Objekt diskret und
-            mit fundiertem Marktverständnis.
+            Ob Mehrfamilienhaus, ehemaliges Geschäftshaus oder Leerstand in
+            bester Lage — melden Sie sich unverbindlich. Wir prüfen Ihr Objekt
+            diskret und mit fundiertem Marktverständnis.
           </p>
-          <a
-            href="mailto:kontakt@praedion-capital.de"
-            className="mt-10 inline-flex items-center gap-2 bg-gold px-8 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-gold-soft"
-          >
-            kontakt@praedion-capital.de
-            <ArrowRight className="h-4 w-4" />
-          </a>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="mailto:invest@praedion-capital.com"
+              className="inline-flex items-center gap-2 bg-gold px-8 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-gold-soft"
+            >
+              invest@praedion-capital.com
+              <ArrowRight className="h-4 w-4" />
+            </a>
+            <a
+              href="tel:+4966317882090"
+              className="inline-flex items-center gap-2 border border-border px-8 py-3.5 text-sm font-light tracking-wide text-foreground transition-colors hover:border-gold hover:text-gold"
+            >
+              06631 788209-0
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="border-t border-border/60 bg-ink-elevated">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 text-xs font-light text-muted-foreground sm:flex-row">
-          <span className="font-display text-base tracking-[0.18em] gold-text-gradient">
-            PRAEDION <span className="text-muted-foreground">CAPITAL</span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo.url}
+              alt="Praedion Capital"
+              width={1920}
+              height={470}
+              className="h-10 w-auto"
+            />
+          </Link>
+          <span className="text-center sm:text-left">
+            Praedion Capital GmbH · Schloßallee 5 · 36329 Romrod
           </span>
           <nav className="flex gap-6">
             <a href="#leistungen" className="transition-colors hover:text-gold">
               Leistungen
             </a>
-            <a href="#ueber-uns" className="transition-colors hover:text-gold">
-              Über uns
+            <a href="#unternehmen" className="transition-colors hover:text-gold">
+              Unternehmen
             </a>
             <a href="#kontakt" className="transition-colors hover:text-gold">
               Kontakt
             </a>
+            <Link to="/impressum" className="transition-colors hover:text-gold">
+              Impressum
+            </Link>
           </nav>
-          <span>© {new Date().getFullYear()} Praedion Capital</span>
+        </div>
+        <div className="border-t border-border/40">
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-4 text-[0.65rem] font-light text-muted-foreground/70 sm:flex-row">
+            <span>© {new Date().getFullYear()} Praedion Capital GmbH</span>
+            <span>USt-IdNr. DE461372687 · HRB 12467 Amtsgericht Gießen</span>
+          </div>
         </div>
       </footer>
     </div>
