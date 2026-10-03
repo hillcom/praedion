@@ -1,23 +1,23 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, Hammer, KeyRound, MapPin } from "lucide-react";
 import heroEstate from "@/assets/hero-estate.jpg";
-import interior from "@/assets/interior.jpg";
+import renovation from "@/assets/renovation.jpg";
 import logo from "@/assets/praedion-logo-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Praedion Capital — Immobiliengesellschaft für den ländlichen Raum" },
+      { title: "Praedion Capital — Rendite aus Bestandsimmobilien im ländlichen Raum" },
       {
         name: "description",
         content:
-          "Praedion Capital kauft, saniert und vermietet Wohn- und Geschäftsimobilien im ländlichen Raum. Werterhalt mit Substanz — diskret, hochwertig, nachhaltig.",
+          "Praedion Capital erwirbt, saniert und vermietet Wohn- und Geschäftshäuser im ländlichen Raum — renditeorientiert, nach Ertragswert bewertet, langfristig gehalten.",
       },
-      { property: "og:title", content: "Praedion Capital — Immobiliengesellschaft für den ländlichen Raum" },
+      { property: "og:title", content: "Praedion Capital — Rendite aus Bestandsimmobilien im ländlichen Raum" },
       {
         property: "og:description",
         content:
-          "Ankauf, Sanierung und Vermietung von Wohn- und Geschäftsimobilien im ländlichen Raum.",
+          "Renditeorientierter Erwerb, Sanierung und Vermietung von Wohn- und Geschäftshäusern im ländlichen Raum.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -38,32 +38,35 @@ const services = [
   {
     icon: Building2,
     title: "Ankauf",
-    text: "Wir erwerben Wohn- und Geschäftshäuser mit Substanz — auch sanierungsbedürftig — und entwickeln sie mit einem klaren Konzept weiter.",
+    text: "Erwerb von Wohn- und Geschäftshäusern mit Sanierungsstau — auch mit Bestandsmietverträgen. Bewertung nach Ertragswertverfahren, Entscheidung kurzfristig.",
+    tag: "Bewertung nach Ertragswert",
   },
   {
     icon: Hammer,
     title: "Sanierung",
-    text: "Sorgfältig geplant, energetisch durchdacht und mit langlebigen Materialien umgesetzt: Wir bringen bestehende Gebäude auf den heutigen Standard.",
+    text: "Instandsetzung, Modernisierung und energetische Ertüchtigung nach dem Wirtschaftlichkeitsprinzip: Das Sanierungsmaß folgt Mietpotenzial und Werterhalt.",
+    tag: "Wirtschaftlichkeitsprinzip",
   },
   {
     icon: KeyRound,
     title: "Vermietung",
-    text: "Sanierte Wohn- und Gewerbeflächen zu fairen Konditionen — langfristig vermietet und zuverlässig verwaltet.",
+    text: "Vermietung von Wohn- und Gewerbeflächen zu marktgerechten Konditionen. Ziel sind stabile Cashflows über lange Haltedauern.",
+    tag: "Wohn- & Gewerbeflächen",
   },
 ];
 
 const principles = [
   {
     title: "Bestand vor Neubau",
-    text: "Wir investieren in bestehende Wohn- und Geschäftshäuser und entwickeln sie weiter — statt Bauland zu verbrauchen. Erhalt ist wirtschaftlich und sinnvoll zugleich.",
+    text: "Sanierungsbedürftiger Bestand wird unter Wiederherstellungskosten gehandelt. Diese Differenz ist die Ausgangsrendite — im ländlichen Raum regelmäßig höher als im Ballungsgebiet.",
   },
   {
-    title: "Ländlicher Raum als Chance",
-    text: "Ortskerne statt Ballungsrand: Wo andere Leerstand sehen, erkennen wir nutzbaren Wert — für Menschen, die dort leben und arbeiten wollen.",
+    title: "Unterbewertete Lagen",
+    text: "Funktionierende Kleinstädte werden vom Kapitalmarkt systematisch übersehen. Wir kaufen dort, wo Ertragswerte niedrig sind und Leerstand noch umkehrbar bleibt.",
   },
   {
-    title: "Langfristig denken",
-    text: "Wir kaufen, um zu behalten. Unsere Immobilien werden instand gehalten, fair vermietet und über lange Haltedauer entwickelt.",
+    title: "Haltedauer schlägt Zyklus",
+    text: "Wir kaufen, um zu behalten. Lange Haltedauern amortisieren die Sanierungsinvestition, tragen Zins- und Marktzyklen und sichern den Ertrag über volle Nutzungszyklen.",
   },
 ];
 
@@ -90,7 +93,7 @@ function LandingPage() {
               Unternehmen
             </a>
             <a href="#prinzipien" className="transition-colors hover:text-gold">
-              Prinzipien
+              Anlageansatz
             </a>
             <a
               href="#kontakt"
@@ -106,7 +109,7 @@ function LandingPage() {
       <section className="relative flex min-h-screen items-end overflow-hidden">
         <img
           src={heroEstate}
-          alt="Saniertes Wohn- und Geschäftshaus in einer Kleinstadt am Abend"
+          alt="Wohn- und Geschäftshaus in einer Kleinstadt am Abend"
           width={1920}
           height={1088}
           className="absolute inset-0 h-full w-full object-cover"
@@ -115,30 +118,31 @@ function LandingPage() {
         <div className="relative mx-auto w-full max-w-6xl px-6 pb-24 pt-40">
           <p className="eyebrow mb-5">Wohn- &amp; Geschäftsimobilien im ländlichen Raum</p>
           <h1 className="max-w-3xl font-display text-5xl font-medium leading-[1.05] sm:text-6xl lg:text-7xl">
-            Wir kaufen, sanieren
+            Wir erwerben, sanieren
             <br />
             und <span className="italic gold-text-gradient">vermieten</span> —
             <br />
-            mit Respekt vor der Substanz.
+            renditeorientiert.
           </h1>
           <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-foreground/80 sm:text-lg">
-            Praedion Capital erwirbt Wohn- und Geschäftshäuser in ländlichen Regionen,
-            bringt sie aufwendig auf Vordermann und vermietet sie langfristig —
-            für lebendige Ortskerne und dauerhafte Werte.
+            Praedion Capital investiert in Wohn- und Geschäftshäuser mit
+            Instandhaltungsstau: Erwerb unter Ertragswert, gezielte Sanierung,
+            Vermietung zu marktgerechten Mieten — daraus entstehen planbare
+            Cashflows und messbare Wertsteigerung.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#kontakt"
               className="inline-flex items-center gap-2 bg-gold px-7 py-3 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-gold-soft"
             >
-              Kontakt aufnehmen
+              Objekt anbieten
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#leistungen"
+              href="#prinzipien"
               className="inline-flex items-center gap-2 border border-border px-7 py-3 text-sm font-light tracking-wide text-foreground transition-colors hover:border-gold hover:text-gold"
             >
-              Unsere Leistungen
+              Unser Anlageansatz
             </a>
           </div>
         </div>
@@ -150,12 +154,12 @@ function LandingPage() {
           <div className="mb-16 flex flex-col gap-4">
             <p className="eyebrow">Leistungen</p>
             <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight sm:text-5xl">
-              Drei Schritte von der alten Substanz zum lebendigen Haus.
+              Erwerb, Sanierung, Vermietung — auf Ertragswert gerechnet.
             </h2>
             <div className="gold-rule mt-2" />
           </div>
           <div className="grid gap-px overflow-hidden border border-border/60 bg-border/60 md:grid-cols-3">
-            {services.map(({ icon: Icon, title, text }) => (
+            {services.map(({ icon: Icon, title, text, tag }) => (
               <article
                 key={title}
                 className="group flex flex-col gap-5 bg-card p-10 transition-colors hover:bg-accent"
@@ -164,11 +168,7 @@ function LandingPage() {
                 <h3 className="font-display text-2xl font-medium">{title}</h3>
                 <p className="text-sm font-light leading-relaxed text-muted-foreground">{text}</p>
                 <span className="mt-auto font-display text-sm italic text-gold/0 transition-all duration-300 group-hover:text-gold/80">
-                  {title === "Ankauf"
-                    ? "Auch erbschafts- oder teilmieterbestand"
-                    : title === "Sanierung"
-                      ? "Energetisch & langlebig"
-                      : "Wohn- & Gewerbeflächen"}
+                  {tag}
                 </span>
               </article>
             ))}
@@ -181,8 +181,8 @@ function LandingPage() {
         <div className="mx-auto grid max-w-6xl md:grid-cols-2">
           <div className="relative min-h-[320px]">
             <img
-              src={interior}
-              alt="Saniertes Treppenhaus eines Mehrfamilienhauses"
+              src={renovation}
+              alt="Wohn- und Geschäftshaus während der Fassadensanierung"
               width={1600}
               height={1200}
               loading="lazy"
@@ -192,36 +192,38 @@ function LandingPage() {
           <div className="flex flex-col justify-center gap-6 bg-ink-elevated px-8 py-20 sm:px-14">
             <p className="eyebrow">Unternehmen</p>
             <h2 className="font-display text-4xl font-medium leading-tight sm:text-5xl">
-              Wo andere Leerstand sehen, sehen wir nutzbaren Wert.
+              Leerstand ist eine Renditefrage.
             </h2>
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-              Praedion Capital ist eine auf den ländlichen Raum spezialisierte
-              Immobiliengesellschaft. Wir erwerben Wohn- und Geschäftshäuser in
-              Dörfern und Kleinstädten, sanieren sie sorgfältig und hochwertig
-              und vermieten sie langfristig.
+              Praedion Capital ist ein auf den ländlichen Raum spezialisierter
+              Bestandsinvestor. Wir erwerben Wohn- und Geschäftshäuser in
+              Dörfern und Kleinstädten, ertüchtigen sie technisch und
+              wirtschaftlich und führen sie der langfristigen Vermietung zu.
             </p>
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-              Unser Anspruch ist schlicht: Bestehende Gebäude in Ortslagen
-              bleiben genutzt, instandgesetzt und wirtschaftlich tragfähig —
-              statt leerzustehen oder zu verfallen.
+              Das Modell ist einfach gerechnet: Erwerb unter
+              Wiederherstellungskosten, Investition in Substanz und
+              Energieeffizienz, Mietentwicklung durch Modernisierung. Was für
+              uns Rendite ist, ist für die Ortslage ein genutztes Gebäude statt
+              eines Leerstands.
             </p>
             <div className="mt-4 flex items-center gap-3 text-gold">
               <MapPin className="h-4 w-4" strokeWidth={1.5} />
               <span className="text-xs font-light uppercase tracking-[0.25em]">
-                Fokus: Ländlicher Raum &amp; Kleinstädte
+                Fokus: Ländliche Lagen &amp; Kleinstädte
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Prinzipien */}
+      {/* Anlageansatz */}
       <section id="prinzipien" className="border-t border-border/60 py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-16 flex flex-col gap-4">
-            <p className="eyebrow">Prinzipien</p>
+            <p className="eyebrow">Anlageansatz</p>
             <h2 className="max-w-2xl font-display text-4xl font-medium leading-tight sm:text-5xl">
-              Woran wir uns messen lassen.
+              Drei Annahmen, aus denen unsere Rendite entsteht.
             </h2>
             <div className="gold-rule mt-2" />
           </div>
@@ -252,19 +254,21 @@ function LandingPage() {
         <div className="relative mx-auto max-w-3xl px-6 py-28 text-center sm:py-36">
           <p className="eyebrow mb-5">Kontakt</p>
           <h2 className="font-display text-4xl font-medium leading-tight sm:text-5xl">
-            Sie verkaufen ein Haus im ländlichen Raum?
+            Sie verkaufen ein Objekt im ländlichen Raum?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-            Ob Mehrfamilienhaus, ehemaliges Geschäftshaus oder Leerstand in
-            bester Lage — melden Sie sich unverbindlich. Wir prüfen Ihr Objekt
-            diskret und mit fundiertem Marktverständnis.
+            Wir erwerben Wohn- und Geschäftshäuser auch mit
+            Instandhaltungsstau, leerstehenden Gewerbeeinheiten oder
+            Bestandsmietverträgen — bewertet nach Ertragswert, diskret
+            abgewickelt, kurzfristig entschieden. Kapitalanleger mit Interesse
+            an gemeinsamen Erwerben erreichen uns unter denselben Kanälen.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href="mailto:invest@praedion-capital.com"
               className="inline-flex items-center gap-2 bg-gold px-8 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-gold-soft"
             >
-              invest@praedion-capital.com
+              Objekt anbieten
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
