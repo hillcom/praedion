@@ -42,27 +42,27 @@ const services = [
   {
     icon: Hammer,
     title: "Sanierung",
-    text: "Denkmalgerecht, energetisch durchdacht und mit hochwertigen Materialien: Wir bringen alte Bausubstanz zurück auf den Stand von heute.",
+    text: "Sorgfältig geplant, energetisch durchdacht und mit langlebigen Materialien umgesetzt: Wir bringen bestehende Gebäude auf den heutigen Standard.",
   },
   {
     icon: KeyRound,
     title: "Vermietung",
-    text: "Sanierte Wohn- und Gewerbeflächen zu fairen Konditionen — langfristig vermietet und persönlich betreut.",
+    text: "Sanierte Wohn- und Gewerbeflächen zu fairen Konditionen — langfristig vermietet und zuverlässig verwaltet.",
   },
 ];
 
 const principles = [
   {
-    title: "Substanz vor Trend",
-    text: "Wir investieren in bestehende Gebäude mit Charakter — nicht in den nächsten Neubau. Jedes Haus hat eine Geschichte, die es zu bewahren gilt.",
+    title: "Bestand vor Neubau",
+    text: "Wir investieren in bestehende Wohn- und Geschäftshäuser und entwickeln sie weiter — statt Bauland zu verbrauchen. Erhalt ist wirtschaftlich und sinnvoll zugleich.",
   },
   {
     title: "Ländlicher Raum als Chance",
-    text: "Dorfkern statt Ballungsrand: Wo andere Leerstand sehen, erkennen wir Wert — für die Menschen, die dort leben und arbeiten wollen.",
+    text: "Ortskerne statt Ballungsrand: Wo andere Leerstand sehen, erkennen wir nutzbaren Wert — für Menschen, die dort leben und arbeiten wollen.",
   },
   {
     title: "Langfristig denken",
-    text: "Wir kaufen, um zu behalten. Unsere Immobilien werden instand gehalten, fair vermietet und über Generationen hinweg entwickelt.",
+    text: "Wir kaufen, um zu behalten. Unsere Immobilien werden instand gehalten, fair vermietet und über lange Haltedauer entwickelt.",
   },
 ];
 
