@@ -84,8 +84,8 @@ function LandingPage() {
             <a href="#leistungen" className="transition-colors hover:text-gold">
               Leistungen
             </a>
-            <a href="#ueber-uns" className="transition-colors hover:text-gold">
-              Über uns
+            <a href="#unternehmen" className="transition-colors hover:text-gold">
+              Unternehmen
             </a>
             <a href="#prinzipien" className="transition-colors hover:text-gold">
               Prinzipien
@@ -104,7 +104,7 @@ function LandingPage() {
       <section className="relative flex min-h-screen items-end overflow-hidden">
         <img
           src={heroEstate}
-          alt="Sorgfältig saniertes Landhaus in der Abenddämmerung"
+          alt="Saniertes Wohn- und Geschäftshaus in einer Kleinstadt am Abend"
           width={1920}
           height={1088}
           className="absolute inset-0 h-full w-full object-cover"
@@ -165,7 +165,7 @@ function LandingPage() {
                   {title === "Ankauf"
                     ? "Auch erbschafts- oder teilmieterbestand"
                     : title === "Sanierung"
-                      ? "Energetisch & denkmalgerecht"
+                      ? "Energetisch & langlebig"
                       : "Wohn- & Gewerbeflächen"}
                 </span>
               </article>
@@ -174,13 +174,13 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Über uns */}
-      <section id="ueber-uns" className="border-t border-border/60">
+      {/* Unternehmen */}
+      <section id="unternehmen" className="border-t border-border/60">
         <div className="mx-auto grid max-w-6xl md:grid-cols-2">
           <div className="relative min-h-[320px]">
             <img
               src={interior}
-              alt="Hochwertig sanierter Altbau-Innenraum"
+              alt="Saniertes Treppenhaus eines Mehrfamilienhauses"
               width={1600}
               height={1200}
               loading="lazy"
@@ -188,20 +188,20 @@ function LandingPage() {
             />
           </div>
           <div className="flex flex-col justify-center gap-6 bg-ink-elevated px-8 py-20 sm:px-14">
-            <p className="eyebrow">Über uns</p>
+            <p className="eyebrow">Unternehmen</p>
             <h2 className="font-display text-4xl font-medium leading-tight sm:text-5xl">
-              Wo andere Leerstand sehen, sehen wir Wert.
+              Wo andere Leerstand sehen, sehen wir nutzbaren Wert.
             </h2>
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
               Praedion Capital ist eine auf den ländlichen Raum spezialisierte
               Immobiliengesellschaft. Wir erwerben Wohn- und Geschäftshäuser in
-              Dörfern und Kleinstädten, sanieren sie mit Sorgfalt und hoher
-              Qualität und vermieten sie langfristig an Mieter, die bleiben wollen.
+              Dörfern und Kleinstädten, sanieren sie sorgfältig und hochwertig
+              und vermieten sie langfristig.
             </p>
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-              Unser Anspruch ist schlicht: Gebäude, die seit Jahrzehnten das Ortsbild
-              prägen, sollen es auch in den nächsten Jahrzehnten tun — belebt,
-              instandgesetzt und wirtschaftlich tragfähig.
+              Unser Anspruch ist schlicht: Bestehende Gebäude in Ortslagen
+              bleiben genutzt, instandgesetzt und wirtschaftlich tragfähig —
+              statt leerzustehen oder zu verfallen.
             </p>
             <div className="mt-4 flex items-center gap-3 text-gold">
               <MapPin className="h-4 w-4" strokeWidth={1.5} />
@@ -277,8 +277,8 @@ function LandingPage() {
             <a href="#leistungen" className="transition-colors hover:text-gold">
               Leistungen
             </a>
-            <a href="#ueber-uns" className="transition-colors hover:text-gold">
-              Über uns
+            <a href="#unternehmen" className="transition-colors hover:text-gold">
+              Unternehmen
             </a>
             <a href="#kontakt" className="transition-colors hover:text-gold">
               Kontakt
