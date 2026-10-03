@@ -253,17 +253,25 @@ function LandingPage() {
             Sie verkaufen ein Haus im ländlichen Raum?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-            Ob Mehrfamilienhaus, ehemalige Dorfwirtschaft oder Leerstand in bester
-            Lage — melden Sie sich unverbindlich. Wir prüfen Ihr Objekt diskret und
-            mit fundiertem Marktverständnis.
+            Ob Mehrfamilienhaus, ehemaliges Geschäftshaus oder Leerstand in
+            bester Lage — melden Sie sich unverbindlich. Wir prüfen Ihr Objekt
+            diskret und mit fundiertem Marktverständnis.
           </p>
-          <a
-            href="mailto:kontakt@praedion-capital.de"
-            className="mt-10 inline-flex items-center gap-2 bg-gold px-8 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-gold-soft"
-          >
-            kontakt@praedion-capital.de
-            <ArrowRight className="h-4 w-4" />
-          </a>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="mailto:invest@praedion-capital.com"
+              className="inline-flex items-center gap-2 bg-gold px-8 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-gold-soft"
+            >
+              invest@praedion-capital.com
+              <ArrowRight className="h-4 w-4" />
+            </a>
+            <a
+              href="tel:+4966317882090"
+              className="inline-flex items-center gap-2 border border-border px-8 py-3.5 text-sm font-light tracking-wide text-foreground transition-colors hover:border-gold hover:text-gold"
+            >
+              06631 788209-0
+            </a>
+          </div>
         </div>
       </section>
 
@@ -272,6 +280,9 @@ function LandingPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 text-xs font-light text-muted-foreground sm:flex-row">
           <span className="font-display text-base tracking-[0.18em] gold-text-gradient">
             PRAEDION <span className="text-muted-foreground">CAPITAL</span>
+          </span>
+          <span className="text-center sm:text-left">
+            Praedion Capital GmbH · Schloßallee 5 · 36329 Romrod
           </span>
           <nav className="flex gap-6">
             <a href="#leistungen" className="transition-colors hover:text-gold">
@@ -283,8 +294,16 @@ function LandingPage() {
             <a href="#kontakt" className="transition-colors hover:text-gold">
               Kontakt
             </a>
+            <Link to="/impressum" className="transition-colors hover:text-gold">
+              Impressum
+            </Link>
           </nav>
-          <span>© {new Date().getFullYear()} Praedion Capital</span>
+        </div>
+        <div className="border-t border-border/40">
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-4 text-[0.65rem] font-light text-muted-foreground/70 sm:flex-row">
+            <span>© {new Date().getFullYear()} Praedion Capital GmbH</span>
+            <span>USt-IdNr. DE461372687 · HRB 12467 Amtsgericht Gießen</span>
+          </div>
         </div>
       </footer>
     </div>
