@@ -203,9 +203,9 @@ function LandingPage() {
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
               Das Modell ist einfach gerechnet: Erwerb unter
               Wiederherstellungskosten, Investition in Substanz und
-              Energieeffizienz, Mietentwicklung durch Modernisierung. Was für
-              uns Rendite ist, ist für die Ortslage ein genutztes Gebäude statt
-              eines Leerstands.
+              Energieeffizienz, Mietentwicklung durch Modernisierung — daraus
+              entsteht planbarer Cashflow und messbare Wertsteigerung über
+              die Haltedauer.
             </p>
             <div className="mt-4 flex items-center gap-3 text-gold">
               <MapPin className="h-4 w-4" strokeWidth={1.5} />
