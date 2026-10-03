@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import logo from "@/assets/praedion-logo-dark.png.asset.json";
 
 export const Route = createFileRoute("/impressum")({
   head: () => ({
@@ -24,13 +25,14 @@ function ImpressumPage() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border/60 bg-ink/80">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link to="/" className="flex items-baseline gap-2">
-            <span className="font-display text-xl font-semibold tracking-[0.18em] gold-text-gradient">
-              PRAEDION
-            </span>
-            <span className="text-[0.65rem] font-light uppercase tracking-[0.45em] text-muted-foreground">
-              Capital
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo.url}
+              alt="Praedion Capital"
+              width={1920}
+              height={470}
+              className="h-9 w-auto"
+            />
           </Link>
           <Link
             to="/"

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, Hammer, KeyRound, MapPin } from "lucide-react";
 import heroEstate from "@/assets/hero-estate.jpg";
 import interior from "@/assets/interior.jpg";
+import logo from "@/assets/praedion-logo-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,13 +73,14 @@ function LandingPage() {
       {/* Navigation */}
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-ink/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link to="/" className="flex items-baseline gap-2">
-            <span className="font-display text-xl font-semibold tracking-[0.18em] gold-text-gradient">
-              PRAEDION
-            </span>
-            <span className="text-[0.65rem] font-light uppercase tracking-[0.45em] text-muted-foreground">
-              Capital
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo.url}
+              alt="Praedion Capital"
+              width={1920}
+              height={470}
+              className="h-9 w-auto"
+            />
           </Link>
           <nav className="hidden items-center gap-8 text-sm font-light tracking-wide text-muted-foreground md:flex">
             <a href="#leistungen" className="transition-colors hover:text-gold">
@@ -278,9 +280,15 @@ function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-border/60 bg-ink-elevated">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 text-xs font-light text-muted-foreground sm:flex-row">
-          <span className="font-display text-base tracking-[0.18em] gold-text-gradient">
-            PRAEDION <span className="text-muted-foreground">CAPITAL</span>
-          </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo.url}
+              alt="Praedion Capital"
+              width={1920}
+              height={470}
+              className="h-10 w-auto"
+            />
+          </Link>
           <span className="text-center sm:text-left">
             Praedion Capital GmbH · Schloßallee 5 · 36329 Romrod
           </span>
