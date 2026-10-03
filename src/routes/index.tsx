@@ -195,7 +195,7 @@ function LandingPage() {
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
               Praedion Capital ist eine auf den ländlichen Raum spezialisierte
               Immobiliengesellschaft. Wir erwerben Wohn- und Geschäftshäuser in
-              Dörfern und Kleinstädten, sanieren sie mit Sorgfalt und eye-level
+              Dörfern und Kleinstädten, sanieren sie mit Sorgfalt und hoher
               Qualität und vermieten sie langfristig an Mieter, die bleiben wollen.
             </p>
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
