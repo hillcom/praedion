@@ -203,9 +203,9 @@ function LandingPage() {
             <p className="text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
               Das Modell ist einfach gerechnet: Erwerb unter
               Wiederherstellungskosten, Investition in Substanz und
-              Energieeffizienz, Mietentwicklung durch Modernisierung. Was für
-              uns Rendite ist, ist für die Ortslage ein genutztes Gebäude statt
-              eines Leerstands.
+              Energieeffizienz, Mietentwicklung durch Modernisierung — daraus
+              entsteht planbarer Cashflow und messbare Wertsteigerung über
+              die Haltedauer.
             </p>
             <div className="mt-4 flex items-center gap-3 text-gold">
               <MapPin className="h-4 w-4" strokeWidth={1.5} />
@@ -238,6 +238,16 @@ function LandingPage() {
               </div>
             ))}
           </div>
+          <div className="mt-16 border border-gold/25 bg-ink-elevated p-10 sm:p-12">
+            <p className="eyebrow mb-4">Für Investoren</p>
+            <p className="max-w-3xl text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
+              Einen Player wie uns möchte man im Team haben: proaktive,
+              zuverlässige und worttreue Umsetzung — geräusch- und
+              störungsfrei. Vereinbarungsgemäßes Arbeiten ist für uns nicht
+              nur Tugend, sondern bares Minimum; daraus entsteht verlässliche
+              Rendite.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -257,11 +267,13 @@ function LandingPage() {
             Sie verkaufen ein Objekt im ländlichen Raum?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-sm font-light leading-relaxed text-muted-foreground sm:text-base">
-            Wir erwerben Wohn- und Geschäftshäuser auch mit
-            Instandhaltungsstau, leerstehenden Gewerbeeinheiten oder
-            Bestandsmietverträgen — bewertet nach Ertragswert, diskret
-            abgewickelt, kurzfristig entschieden. Kapitalanleger mit Interesse
-            an gemeinsamen Erwerben erreichen uns unter denselben Kanälen.
+            Objekte mit Instandhaltungsstau, Leerstand oder
+            Bestandsmietverträgen sind für uns kein Hemmnis, sondern
+            Ausgangspunkt: bewertet nach Ertragswert, diskret abgewickelt,
+            kurzfristig entschieden. Wir arbeiten proaktiv, zuverlässig und
+            worttreu — vereinbarungsgemäße Umsetzung ist für uns kein
+            Anspruch, sondern bares Minimum. Kapitalanleger mit Interesse an
+            gemeinsamen Erwerben erreichen uns unter denselben Kanälen.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
