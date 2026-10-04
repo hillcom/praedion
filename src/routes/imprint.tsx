@@ -1,26 +1,26 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/praedion-logo-dark.png.asset.json";
 
-export const Route = createFileRoute("/impressum")({
+export const Route = createFileRoute("/imprint")({
   head: () => ({
     meta: [
-      { title: "Impressum — Praedion Capital GmbH" },
+      { title: "Imprint — Praedion Capital GmbH" },
       {
         name: "description",
         content:
-          "Impressum der Praedion Capital GmbH, Schloßallee 5, 36329 Romrod. Angaben gemäß § 5 DDG, Kontakt, Register- und Steuerdaten.",
+          "Imprint der Praedion Capital GmbH, Schloßallee 5, 36329 Romrod. Angaben gemäß § 5 DDG, Kontakt, Register- und Steuerdaten.",
       },
-      { property: "og:title", content: "Impressum — Praedion Capital GmbH" },
-      { property: "og:description", content: "Impressum der Praedion Capital GmbH." },
+      { property: "og:title", content: "Imprint — Praedion Capital GmbH" },
+      { property: "og:description", content: "Imprint der Praedion Capital GmbH." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/impressum" }],
+    links: [{ rel: "canonical", href: "/imprint" }],
   }),
-  component: ImpressumPage,
+  component: ImprintPage,
 });
 
-function ImpressumPage() {
+function ImprintPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border/60 bg-ink/80">
@@ -45,7 +45,7 @@ function ImpressumPage() {
 
       <main className="mx-auto max-w-3xl px-6 py-20">
         <p className="eyebrow mb-4">Rechtliches</p>
-        <h1 className="font-display text-4xl font-medium sm:text-5xl">Impressum</h1>
+        <h1 className="font-display text-4xl font-medium sm:text-5xl">Imprint</h1>
         <div className="gold-rule mt-4 mb-12" />
 
         <div className="flex flex-col gap-10 text-sm font-light leading-relaxed">
@@ -111,8 +111,8 @@ function ImpressumPage() {
       <footer className="border-t border-border/60 bg-ink-elevated">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-xs font-light text-muted-foreground sm:flex-row">
           <span>© {new Date().getFullYear()} Praedion Capital GmbH</span>
-          <Link to="/impressum" className="transition-colors hover:text-gold">
-            Impressum
+          <Link to="/imprint" className="transition-colors hover:text-gold">
+            Imprint
           </Link>
         </div>
       </footer>
