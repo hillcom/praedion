@@ -70,17 +70,16 @@ function LandingPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/30" />
         <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-40">
-          <p className="eyebrow mb-5">Praedion Capital · Investmentstrategie Bestand</p>
           <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.02] sm:text-6xl lg:text-7xl">
             Kapital folgt nicht
             <br className="hidden sm:block" /> dem Konsens.
             <br />
-            <span className="italic gold-text-gradient">Sondern der Opportunität.</span>
+            <span className="italic gold-text-gradient">Es erkennt Opportunität.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-foreground/80 sm:text-lg">
             Wir erwerben Wohn- und Geschäftsimmobilien mit strukturellem
-            Wertsteigerungspotenzial, repositionieren sie und überführen diese
-            anschließend in einen langfristig bewirtschafteten Bestand.
+            Wertsteigerungspotenzial, repositionieren die Assets und integrieren
+            sie in einen langfristig bewirtschafteten Bestand.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -130,10 +129,10 @@ function LandingPage() {
           <div className="gold-rule" />
 
           <p className="font-display text-3xl font-medium leading-snug sm:text-4xl">
-            Wir suchen keine Lage, die sich selbst erklärt.
+            Lage ist kein Prestige.
             <br />
             <span className="italic gold-text-gradient">
-              Wir suchen Lagen, die sich rechnen.
+              Sondern Kalkül.
             </span>
           </p>
         </div>
