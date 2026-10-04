@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Praedion Capital erwirbt und repositioniert Wohn- und Geschäftsimmobilien im ländlichen Raum für den langfristig bewirtschafteten Bestand.",
+          "Praedion Capital erwirbt Wohn- und Geschäftsimmobilien mit strukturellem Wertsteigerungspotenzial im ländlichen Raum und überführt sie in einen langfristig bewirtschafteten Bestand.",
       },
       { property: "og:title", content: "Praedion Capital — Bestand. Kapital. Konsequenz." },
       {
@@ -48,13 +48,10 @@ function LandingPage() {
               className="h-9 w-auto"
             />
           </Link>
-          <nav className="flex items-center gap-8 text-sm font-light tracking-wide text-muted-foreground">
-            <a href="mailto:invest@praedion-capital.com" className="hidden transition-colors hover:text-gold sm:inline">
-              invest@praedion-capital.com
-            </a>
+          <nav className="flex items-center">
             <a
               href="mailto:invest@praedion-capital.com"
-              className="border border-gold/60 px-4 py-1.5 text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
+              className="border border-gold/60 px-4 py-1.5 text-sm font-light tracking-wide text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
             >
               Kontakt
             </a>
@@ -63,7 +60,7 @@ function LandingPage() {
       </header>
 
       {/* Hero */}
-      <section className="relative flex flex-1 items-end overflow-hidden">
+      <section className="relative flex min-h-[82vh] items-end overflow-hidden">
         <img
           src={heroEstate}
           alt="Wohn- und Geschäftshaus in einer Kleinstadt am Abend"
@@ -72,7 +69,7 @@ function LandingPage() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/30" />
-        <div className="relative mx-auto w-full max-w-6xl px-6 pb-24 pt-40">
+        <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-40">
           <p className="eyebrow mb-5">Praedion Capital · Investmentstrategie Bestand</p>
           <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.02] sm:text-6xl lg:text-7xl">
             Kapital folgt nicht
@@ -81,15 +78,10 @@ function LandingPage() {
             <span className="italic gold-text-gradient">Sondern der Opportunität.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-foreground/80 sm:text-lg">
-            Wir erwerben Wohn- und Geschäftsimmobilien im ländlichen Raum,
-            repositionieren sie und überführen sie in einen langfristig bewirtschafteten Bestand.
+            Wir erwerben Wohn- und Geschäftsimmobilien mit strukturellem
+            Wertsteigerungspotenzial, repositionieren sie und überführen diese
+            anschließend in einen langfristig bewirtschafteten Bestand.
           </p>
-          <div className="mt-7 flex flex-wrap gap-x-7 gap-y-2 text-xs font-medium uppercase tracking-[0.16em] text-foreground/75 sm:text-sm">
-            <span>Sanierungsstau</span>
-            <span className="text-gold">Substanz</span>
-            <span>Entwicklungspotenzial</span>
-            <span className="text-gold">Langfristige Haltung</span>
-          </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="mailto:invest@praedion-capital.com?subject=Immobilie%20anbieten"
@@ -109,6 +101,44 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* Statements */}
+      <section className="border-t border-border/60 bg-background">
+        <div className="mx-auto flex max-w-4xl flex-col gap-16 px-6 py-24">
+          <p className="font-display text-3xl font-medium leading-snug sm:text-4xl">
+            Der ländliche Raum ist kein Kompromiss.
+            <br />
+            <span className="italic gold-text-gradient">
+              Er ist unsere Investmentthese.
+            </span>
+          </p>
+
+          <div className="gold-rule" />
+
+          <div className="flex flex-col gap-6 text-base font-light leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="font-display text-2xl font-medium text-foreground sm:text-3xl">
+              Kapitalmärkte lieben Narrative.{" "}
+              <span className="italic text-gold">Wir bevorzugen Fundamentaldaten.</span>
+            </p>
+            <p className="max-w-2xl">
+              Während sich Kapital in den Metropolen um offensichtliche Assets
+              konzentriert, richtet sich unser Fokus auf Märkte mit geringerer
+              institutioneller Aufmerksamkeit und entsprechend anderen
+              Einstiegsparametern.
+            </p>
+          </div>
+
+          <div className="gold-rule" />
+
+          <p className="font-display text-3xl font-medium leading-snug sm:text-4xl">
+            Wir suchen keine Lage, die sich selbst erklärt.
+            <br />
+            <span className="italic gold-text-gradient">
+              Wir suchen Lagen, die sich rechnen.
+            </span>
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-border/60 bg-ink-elevated">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-xs font-light text-muted-foreground sm:flex-row">
@@ -124,17 +154,18 @@ function LandingPage() {
           <span className="text-center sm:text-left">
             Praedion Capital GmbH · Schloßallee 5 · 36329 Romrod
           </span>
-          <Link to="/impressum" className="transition-colors hover:text-gold">
-            Impressum
+          <Link to="/imprint" className="transition-colors hover:text-gold">
+            Imprint
           </Link>
         </div>
         <div className="border-t border-border/40">
-          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-4 text-[0.65rem] font-light text-muted-foreground/70 sm:flex-row">
-            <span>© {new Date().getFullYear()} Praedion Capital GmbH</span>
-            <span>USt-IdNr. DE461372687 · HRB 12467 Amtsgericht Gießen</span>
+          <div className="mx-auto px-6 py-4 text-[0.65rem] font-light text-muted-foreground/70">
+            <span className="block text-center">
+              © {new Date().getFullYear()} Praedion Capital GmbH
+            </span>
           </div>
         </div>
-      </footer>
+        </footer>
     </div>
   );
 }
