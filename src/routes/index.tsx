@@ -1,22 +1,22 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Landmark } from "lucide-react";
 import heroEstate from "@/assets/hero-estate.jpg";
 import logo from "@/assets/praedion-logo-dark.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Praedion Capital — Rendite aus Bestandsimmobilien im ländlichen Raum" },
+      { title: "Praedion Capital — Bestand. Kapital. Konsequenz." },
       {
         name: "description",
         content:
-          "Praedion Capital erwirbt, saniert und vermietet Wohn- und Geschäftshäuser im ländlichen Raum — renditeorientiert, nach Ertragswert bewertet, langfristig gehalten.",
+          "Praedion Capital erwirbt und repositioniert Wohn- und Geschäftsimmobilien im ländlichen Raum für den langfristig bewirtschafteten Bestand.",
       },
-      { property: "og:title", content: "Praedion Capital — Rendite aus Bestandsimmobilien im ländlichen Raum" },
+      { property: "og:title", content: "Praedion Capital — Bestand. Kapital. Konsequenz." },
       {
         property: "og:description",
         content:
-          "Renditeorientierter Erwerb, Sanierung und Vermietung von Wohn- und Geschäftshäusern im ländlichen Raum.",
+          "Erwerb, Repositionierung und langfristige Bestandshaltung von Wohn- und Geschäftsimmobilien im ländlichen Raum.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -73,32 +73,37 @@ function LandingPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/30" />
         <div className="relative mx-auto w-full max-w-6xl px-6 pb-24 pt-40">
-          <p className="eyebrow mb-5">Wohn- &amp; Geschäftsimobilien im ländlichen Raum</p>
-          <h1 className="max-w-3xl font-display text-5xl font-medium leading-[1.05] sm:text-6xl lg:text-7xl">
-            Wir erwerben, sanieren
+          <p className="eyebrow mb-5">Praedion Capital · Investmentstrategie Bestand</p>
+          <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.02] sm:text-6xl lg:text-7xl">
+            Kapital folgt nicht
+            <br className="hidden sm:block" /> dem Konsens.
             <br />
-            und <span className="italic gold-text-gradient">vermieten</span> —
-            <br />
-            renditeorientiert.
+            <span className="italic gold-text-gradient">Sondern der Opportunität.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-foreground/80 sm:text-lg">
-            Praedion Capital investiert in Wohn- und Geschäftshäuser mit
-            Instandhaltungsstau: Erwerb unter Ertragswert, gezielte Sanierung,
-            Vermietung zu marktgerechten Mieten.
+          <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-foreground/80 sm:text-lg">
+            Wir erwerben Wohn- und Geschäftsimmobilien im ländlichen Raum,
+            repositionieren sie und überführen sie in einen langfristig bewirtschafteten Bestand.
           </p>
+          <div className="mt-7 flex flex-wrap gap-x-7 gap-y-2 text-xs font-medium uppercase tracking-[0.16em] text-foreground/75 sm:text-sm">
+            <span>Sanierungsstau</span>
+            <span className="text-gold">Substanz</span>
+            <span>Entwicklungspotenzial</span>
+            <span className="text-gold">Langfristige Haltung</span>
+          </div>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="mailto:invest@praedion-capital.com"
+              href="mailto:invest@praedion-capital.com?subject=Immobilie%20anbieten"
               className="inline-flex items-center gap-2 bg-gold px-7 py-3 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-gold-soft"
             >
-              Objekt anbieten
+              Immobilie anbieten
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="tel:+4966317882090"
+              href="mailto:invest@praedion-capital.com?subject=Kapitalpartnerschaft"
               className="inline-flex items-center gap-2 border border-border px-7 py-3 text-sm font-light tracking-wide text-foreground transition-colors hover:border-gold hover:text-gold"
             >
-              06631 788209-0
+              <Landmark className="h-4 w-4" />
+              Für Kapitalpartner
             </a>
           </div>
         </div>
