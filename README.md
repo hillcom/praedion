@@ -1,14 +1,21 @@
-# Welcome to your Lovable project
+# Praedion Capital Landing
+
+Baue eine Landingpage für unsere Immobiliengesellschaft Praedion Capital.
+Wir spezialisieren uns auf das Kaufen, Sanieren und vermieten von Wohn- u . Geschäftsimmobilien im ländlichen Raum.
+
+Farben Gold und schwarz, schlicht aber hochwertiges auftreten.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://praedion.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/3166334e-0310-5889-9085-aad6c47c0749).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +27,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
