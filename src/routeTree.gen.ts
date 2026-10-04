@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as ImprintRouteImport } from './routes/imprint'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const ImpressumRoute = ImpressumRouteImport.update({
   path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ImprintRoute = ImprintRouteImport.update({
+  id: '/imprint',
+  path: '/imprint',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/impressum': typeof ImpressumRoute
+  '/imprint': typeof ImprintRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/impressum': typeof ImpressumRoute
+  '/imprint': typeof ImprintRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/impressum': typeof ImpressumRoute
+  '/imprint': typeof ImprintRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/impressum'
+  fullPaths: '/' | '/impressum' | '/imprint'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/impressum'
-  id: '__root__' | '/' | '/impressum'
+  to: '/' | '/impressum' | '/imprint'
+  id: '__root__' | '/' | '/impressum' | '/imprint'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ImpressumRoute: typeof ImpressumRoute
+  ImprintRoute: typeof ImprintRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/imprint': {
+      id: '/imprint'
+      path: '/imprint'
+      fullPath: '/imprint'
+      preLoaderRoute: typeof ImprintRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ImpressumRoute: ImpressumRoute,
+  ImprintRoute: ImprintRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
